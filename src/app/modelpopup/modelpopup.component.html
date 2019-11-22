@@ -1,15 +1,17 @@
 
-<button (click)="getUserDetails()" type="button" class="btn btn-primary">
-  Detail
-</button>
+
 <br/>
 <div class="container" style = "overflow-y: scroll; height: 600px;">
+  <h1 style="text-align:left;color:green;"> 
+    Users List 
+  </h1> 
   <table class="table">
     <tr>
         <th>#</th>
         <th>Full Name</th>
         <th>Email</th>
         <th>City</th>
+        <th>State</th>
         <th>Actions</th>
     </tr>
     <tr *ngFor="let user of userDetails; let i = index">
@@ -17,7 +19,13 @@
         <td>{{user.UserFullName}}</td>
         <td>{{user.EmailId}}</td>
         <td>{{user.UserAddress.City}}</td>
-        <td><button class="btn btn-primary">Update</button> &nbsp; <button (onclick) = "deleteUser(user.Id)" class="btn btn-danger">Delete</button> </td>
+        <td>{{user.UserAddress.State}}</td>
+        <td>
+          <button (click)="deleteUser(user.UserId)" type="button" class="btn btn-danger">
+            Delete 
+          </button>
+        </td>
+        <!-- <td><button  type = "button" class="btn btn-primary">Update</button> &nbsp; <button type = "button" (onclick) = "getUserDetails()" class="btn btn-danger">Delete</button> </td> -->
     </tr>
   </table>
 </div>

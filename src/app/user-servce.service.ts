@@ -19,8 +19,9 @@ export class UserServceService {
   {
     return this.http.get<UserInfo[]>(this.Url +'/User/UserInfo');
   }
-  DeleteUserId(id: number)
+  DeleteUserId(Id: number)
   {
-    return this.http.delete<UserInfo>(this.Url + '/User/DeleteUser/' + id);
+    console.log(Id);
+    return this.http.delete<UserInfo>(this.Url + '/User/DeletedUser/' + Id);
   }
 }
