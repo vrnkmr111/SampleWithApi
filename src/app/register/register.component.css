@@ -1,0 +1,29 @@
+.note
+{
+    text-align: left;
+    height: 30px;
+    background: -webkit-linear-gradient(left, #0ba6ee50, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #0ba6ee50;
+    margin-bottom: 2%;
+    border-left: 3px solid #f36d33;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}

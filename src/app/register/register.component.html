@@ -1,0 +1,86 @@
+<br>
+<form [formGroup]="registrationForm" (ngSubmit)="onFormSubmit(registrationForm.value)">
+<div class="container register-form">
+    <div class="form" >
+
+        <div class="note">
+            <p>&nbsp; &nbsp; Sample User Registration Form</p>
+        </div>
+       
+        <div class="form-content">
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name *" formControlName = "FirstName" value=""/>
+                    </div>
+                    <!-- <div *ngif ="f.form-control('FirstName').required"> First Name is required</div> -->
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name *"formControlName = "LastName" value=""/>
+                    </div>
+                    <!-- <div *ngIf ="f.LastName.errors.required"> Last Name is required</div> -->
+                </div>
+                
+            </div>
+            <div class="row">
+                    <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email Address *" formControlName = "EmailId" value=""/>
+                            </div>
+                            <!-- <div *ngif ="EmailId.invalid"> EmailId is required</div> -->
+                            </div>
+                            <div class= "col-md-4">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Your Password *" formControlName = "Password" value=""/>
+                                </div>
+                                
+                            </div>    
+            </div>   
+            <div formGroupName="UserAddress">
+                 <div class="row">
+                    <div class= "col-md-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Address 1 *" formControlName = "Addess1" value=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Address 2 *" formControlName = "Address2" value=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="City *" formControlName = "City" value=""/>
+                            </div>
+                        </div>
+                </div>   
+                <div class="row">
+                        <div class= "col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="State *" formControlName = "State" value=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Country *" formControlName = "Country" value=""/>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-8">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        
+                </div>             
+            </div>              
+              
+        </div>
+    
+    </div>
+
+</div>
+</form> 
+<router-outlet></router-outlet>
