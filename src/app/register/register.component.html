@@ -13,14 +13,21 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="First Name *" formControlName = "FirstName" value=""/>
+                        <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"   class="alert alert-danger"> 
+                                <div *ngIf ="firstName.errors.required" class="alert alert-danger"> First Name is required</div> 
+                        </div>
+                        
                     </div>
-                    <!-- <div *ngif ="f.form-control('FirstName').required"> First Name is required</div> -->
+                    
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Last Name *"formControlName = "LastName" value=""/>
+                        <input type="text" class="form-control" placeholder="Last Name *" formControlName = "LastName" value=""/>
+                        <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"   class="alert alert-danger"> 
+                                <div *ngIf ="lastName.errors.required" class="alert alert-danger"> Last Name is required</div> 
+                        </div>   
                     </div>
-                    <!-- <div *ngIf ="f.LastName.errors.required"> Last Name is required</div> -->
+                    
                 </div>
                 
             </div>
@@ -28,12 +35,19 @@
                     <div class="col-md-4">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Email Address *" formControlName = "EmailId" value=""/>
+                                <div *ngIf="emailId.invalid && (emailId.dirty || emailId.touched)"   class="alert alert-danger"> 
+                                        <div *ngIf ="emailId.errors.required" class="alert alert-danger"> Email is required</div> 
+                                        
+                                </div>   
                             </div>
-                            <!-- <div *ngif ="EmailId.invalid"> EmailId is required</div> -->
+                            
                             </div>
                             <div class= "col-md-4">
                                 <div class="form-group">
                                     <input type="password" class="form-control" placeholder="Your Password *" formControlName = "Password" value=""/>
+                                    <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)"   class="alert alert-danger"> 
+                                            <div *ngIf ="pwd.errors.required" class="alert alert-danger"> Password is required</div> 
+                                    </div>   
                                 </div>
                                 
                             </div>    
@@ -72,8 +86,7 @@
             
             <div class="row">
                 <div class="col-md-8">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        
+                        <button type="submit"  class="btn btn-primary" >Save</button>                        
                 </div>             
             </div>              
               

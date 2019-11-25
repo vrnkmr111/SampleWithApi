@@ -1,5 +1,5 @@
 export class UserInfo {
-   public Id: number;
+   public UserId: number;
    public FirstName: string;
    public LastName: string;
    public EmailId: string;
