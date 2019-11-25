@@ -13,7 +13,7 @@ import { ModalModule, BsModalRef } from 'ngx-bootstrap/modal';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [

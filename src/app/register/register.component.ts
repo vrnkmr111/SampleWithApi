@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
     this.registrationForm = this.formBuilder.group({
       FirstName: ['', Validators.required],
       LastName: ['', Validators.required],
-      EmailId: ['', Validators.required],
+      EmailId: ['', Validators.required, Validators.email],
       Password: ['', Validators.required, Validators.maxLength(10)],
       UserFullName: [],
       UserAddress: this.formBuilder.group(
@@ -32,13 +32,17 @@ export class RegisterComponent implements OnInit {
           Country: []
         }
       )
-    });    
+    });
   }
+    
   reset()
   {
     this.registrationForm.reset();
   }
-  get f() { return this.registrationForm.controls; }
+  get firstName() { return this.registrationForm.get('FirstName'); }
+  get lastName() { return this.registrationForm.get('LastName'); }
+  get emailId() { return this.registrationForm.get('EmailId'); }
+  get pwd() { return this.registrationForm.get('Password'); }
     onFormSubmit()
     {
       const user = this.registrationForm.value;    
