@@ -45,8 +45,8 @@ export class RegisterComponent implements OnInit {
   get pwd() { return this.registrationForm.get('Password'); }
     onFormSubmit()
     {
-      const user = this.registrationForm.value;    
-      this.Createemployee(user);    
+        const user = this.registrationForm.value;    
+        this.Createemployee(user);    
     }
     Createemployee(userInfo:UserInfo)
     {
