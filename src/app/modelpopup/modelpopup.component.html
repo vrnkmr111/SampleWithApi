@@ -21,6 +21,10 @@
         <td>{{user.UserAddress.City}}</td>
         <td>{{user.UserAddress.State}}</td>
         <td>
+            <button (click)="updateUser(user.UserId)" type="button" class="btn btn-primary">
+                Update 
+              </button>
+              &nbsp;
           <button (click)="deleteUser(user.UserId)" type="button" class="btn btn-danger">
             Delete 
           </button>
